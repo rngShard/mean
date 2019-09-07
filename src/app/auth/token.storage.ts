@@ -6,7 +6,7 @@ const TOKEN_KEY = 'AuthToken';
 @Injectable()
 export class TokenStorage {
 
-  constructor() { }
+  constructor() {}
 
   signOut() {
     window.localStorage.removeItem(TOKEN_KEY);
