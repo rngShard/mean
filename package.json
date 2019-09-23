@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "serve": "node server",
-    "start": "concurrently -c \"rm -r dist\" \"yellow.bold,green.bold\" -n \"SERVER,BUILD\" \"nodemon server\" \"ng build --watch\"",
+    "start": "concurrently \"del-cli dist/**/*\" -n \"SERVER,BUILD\" \"nodemon server\" \"ng build --watch\"",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -68,6 +68,7 @@
     "@types/node": "~10.3.0",
     "codelyzer": "4.3.0",
     "concurrently": "^3.5.1",
+    "del-cli": "^3.0.0",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^3.1.3",
