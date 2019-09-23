@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 
@@ -10,11 +10,9 @@ import {AuthService} from '../auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['../auth.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
-
-  ngOnInit() {}
 
   passwordsMatchValidator(control: FormControl): ValidationErrors {
     let password = control.root.get('password');
