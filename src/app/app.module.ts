@@ -44,4 +44,4 @@ import { HomeComponent } from './home/home.component';
   entryComponents: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

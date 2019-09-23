@@ -12,10 +12,9 @@ import {AuthService} from '../auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   passwordsMatchValidator(control: FormControl): ValidationErrors {
     let password = control.root.get('password');
