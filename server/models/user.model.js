@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-  fullname: {
+  username: {
     type: String,
     required: true
   },
@@ -22,6 +22,7 @@ const UserSchema = new mongoose.Schema({
   },
   roles: [{
     type: String,
+    enum: ['verified', 'trusted', 'admin', 'system']
   }]
 }, {
   versionKey: false

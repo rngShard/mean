@@ -1,16 +1,18 @@
-.example-icon {
-  padding: 0 14px;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-.example-card {
-  width: 400px;
+.register-card {
+  width: 20em;
   margin: 10% auto;
+  text-align: center;
 }
 
 .mat-card-title {
   font-size: 16px;
+  font-weight: bold;
+}
+
+div.registrationForm {
+  display: flex;
+  flex-direction: column;
+}
+div.registrationForm> * {
+  width: 100%;
 }

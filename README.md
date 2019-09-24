@@ -23,8 +23,9 @@ This includes requirements, installation & deploy.
 ``` bash
 git clone https://github.com/rngShard/mean.git
 cd mean
-cp .env.example .env    # then adjust config params
 npm install
+cp .env.example .env  # then adjust config params
+node setupUtils/createSystemUsers.js  # to create initial System-User accounts (admin & test)
 ```
 For development, continue with
 ```bash
