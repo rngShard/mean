@@ -23,6 +23,8 @@ export class AuthService {
           this.setUser(data.user);
           this.token.saveToken(data.token);
           observer.complete();
+      }, error => {
+        observer.error();
       })
     });
   }
@@ -44,7 +46,12 @@ export class AuthService {
   }
 
   setUser(user): void {
-    if (user) user.isAdmin = (user.roles.indexOf('admin') > -1);
+    if (user) {
+      user.isSystemAcc = (user.roles.indexOf('system') > -1);
+      user.isAdmin = (user.roles.indexOf('admin') > -1);
+      user.isTrusted = (user.roles.indexOf('trusted') > -1);
+      user.isVerified = (user.roles.indexOf('verified') > -1);
+    }
     this.$userSource.next(user);
     (<any>window).user = user;
   }

@@ -24,10 +24,6 @@ export class HeaderComponent implements OnInit {
 
   openLoginDialog(): void {
     const dialogRef = this.dialog.open(LoginComponent, {});
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   this.animal = result;
-    // });
   }
 
   logout(): void {
