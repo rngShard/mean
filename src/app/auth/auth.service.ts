@@ -41,7 +41,7 @@ export class AuthService {
         this.setUser(data.user);
         this.token.saveToken(data.token);
         observer.complete();
-      })
+      }, error => observer.error(error));
     });
   }
 
