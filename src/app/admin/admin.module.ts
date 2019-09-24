@@ -6,10 +6,13 @@ import { SharedModule } from '../shared/shared.module';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { OnlyAdminUsersGuard } from './admin-user-guard';
+import { UserMgmtComponent } from './userMgmt/user-mgmt.component';
+import { UserService } from './userMgmt/user.service';
 
 @NgModule({
   declarations: [
-    AdminComponent
+    AdminComponent,
+    UserMgmtComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +20,7 @@ import { OnlyAdminUsersGuard } from './admin-user-guard';
     SharedModule
   ],
   providers: [
-    OnlyAdminUsersGuard
+    OnlyAdminUsersGuard,
+    UserService
   ]})
 export class AdminModule {}
