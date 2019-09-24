@@ -13,6 +13,7 @@ const userSchema = Joi.object({
 module.exports = {
   getAll,
   insert,
+  deleteUser,
   assignRole,
   revokeRole,
   toggleRole
@@ -27,6 +28,10 @@ async function insert(user) {
   user.hashedPassword = bcrypt.hashSync(user.password, 10);
   delete user.password;
   return await new User(user).save();
+}
+
+async function deleteUser(email) {
+  return await User.deleteOne({email: email});
 }
 
 async function assignRole(userId, role) {

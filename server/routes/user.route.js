@@ -10,7 +10,8 @@ router.use(passport.authenticate('jwt', { session: false }))
 
 router.get('/', asyncHandler(getAll));
 router.post('/', asyncHandler(insert));
-router.post('/update/toggleRole', asyncHandler(toggleRole))
+router.delete('/:email', asyncHandler(deleteUser));
+router.post('/:email/toggleRole', asyncHandler(toggleRole))
 
 async function getAll(req, res) {
   let users = await userCtrl.getAll();
@@ -22,7 +23,12 @@ async function insert(req, res) {
   res.json(user);
 }
 
+async function deleteUser(req, res) {
+  let result = await userCtrl.deleteUser(req.params.email);
+  res.json(result);
+}
+
 async function toggleRole(req, res) {
-  let newVal = await userCtrl.toggleRole(req.body.email, req.body.role, req.body.assign);
+  let newVal = await userCtrl.toggleRole(req.params.email, req.body.role, req.body.assign);
   res.json(newVal);
 }

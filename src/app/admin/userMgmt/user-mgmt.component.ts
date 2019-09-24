@@ -31,16 +31,18 @@ export class UserMgmtComponent implements OnInit {
     this._userService.toggleRole(email, role, checked).subscribe(data => {
       this._snackBar.open(`User <${email}> had <${role}> ${checked ? "assigned" : "revoked"}`, '', {duration: 3000});
       this._updateUsers();
-    }, error =>
-      this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
+    }, error => this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
         .onAction().subscribe(() => window.alert(JSON.stringify(error))));
   }
 
   promptDelete(email: string): void {
     this._snackBar.open(`Really delete user <${email}>?`, 'Delete', {panelClass: 'custom-snackbar-warning', duration: 5000})
       .onAction().subscribe(() => {
-        // TODO: actually triger
-        window.alert('delete triggered');
+        this._userService.deleteUser(email).subscribe(data => {
+          this._snackBar.open(`User <${email}> was deleted`, '', {duration: 3000});
+          this._updateUsers();
+        }, error => this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
+            .onAction().subscribe(() => window.alert(JSON.stringify(error))));
       });
   }
 }
