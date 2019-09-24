@@ -22,14 +22,10 @@ const envVarsSchema = Joi.object({
     .description('Mongo DB host url'),
   MONGO_PORT: Joi.number()
     .default(27017),
-  SYS_ACC_ADMIN_NAME: Joi.string()
-    .default('admin'),
   SYS_ACC_ADMIN_EMAIL: Joi.string().email()
     .default('admin@system.com'),
   SYS_ACC_ADMIN_PW: Joi.string()
     .description('Strong password for system admin account'),
-  SYS_ACC_TEST_NAME: Joi.string()
-    .default('test'),
   SYS_ACC_TEST_EMAIL: Joi.string().email()
     .default('test@system.com'),
   SYS_ACC_TEST_PW: Joi.string()
@@ -53,13 +49,13 @@ const config = {
     port: envVars.MONGO_PORT
   },
   sysAccAdmin: {
-    username: envVars.SYS_ACC_ADMIN_NAME,
+    username: 'admin',
     email: envVars.SYS_ACC_ADMIN_EMAIL,
     password: envVars.SYS_ACC_ADMIN_PW,
     repeatPassword: envVars.SYS_ACC_ADMIN_PW
   },
   sysAccTest: {
-    username: envVars.SYS_ACC_TEST_NAME,
+    username: 'test',
     email: envVars.SYS_ACC_TEST_EMAIL,
     password: envVars.SYS_ACC_TEST_PW,
     repeatPassword: envVars.SYS_ACC_TEST_PW

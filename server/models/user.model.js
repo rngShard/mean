@@ -22,6 +22,7 @@ const UserSchema = new mongoose.Schema({
   },
   roles: [{
     type: String,
+    enum: ['verified', 'trusted', 'admin', 'system']
   }]
 }, {
   versionKey: false
