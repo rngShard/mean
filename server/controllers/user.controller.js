@@ -11,9 +11,14 @@ const userSchema = Joi.object({
 
 
 module.exports = {
+  getAll,
   insert,
   assignRole,
   revokeRole
+}
+
+async function getAll() {
+  return await User.find();
 }
 
 async function insert(user) {

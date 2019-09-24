@@ -1,3 +1,36 @@
-<p *ngFor="let user of users">
-  {{user.username}} of {{user.createdAt}}
-</p>
+<mat-list>
+  <h3 mat-subheader> Admins (verified) </h3>
+  <ng-container *ngFor="let u of users">
+    <mat-list-item *ngIf="u.roles.indexOf('admin') > -1">
+      <mat-icon mat-list-icon>face</mat-icon>
+      <h4 mat-line>{{u.username}} ({{u.email}})</h4>
+      <p mat-line> {{u.createdAt}} </p>
+      <button mat-raised-button color="warn" (click)="promptDelete(u.email)" [disabled]="u.roles.indexOf('system') > -1">Delete</button>
+    </mat-list-item>
+  </ng-container>
+
+  <mat-divider></mat-divider>
+
+  <h3 mat-subheader> Verified users </h3>
+  <ng-container *ngFor="let u of users">
+    <mat-list-item *ngIf="u.roles.indexOf('admin') < 0 && u.roles.indexOf('verified') > -1">
+      <mat-icon mat-list-icon *ngIf="u.roles.indexOf('trusted') > -1">account_circle</mat-icon>
+      <mat-icon mat-list-icon *ngIf="u.roles.indexOf('trusted') < 0">account_box</mat-icon>
+      <h4 mat-line>{{u.username}} ({{u.email}})</h4>
+      <p mat-line> {{u.createdAt}} </p>
+      <button mat-raised-button color="warn" (click)="promptDelete(u.email)" [disabled]="u.roles.indexOf('system') > -1">Delete</button>
+    </mat-list-item>
+  </ng-container>
+
+  <mat-divider></mat-divider>
+
+  <h3 mat-subheader> Non-verified users </h3>
+  <ng-container *ngFor="let u of users">
+    <mat-list-item *ngIf="u.roles.indexOf('admin') < 0 && u.roles.indexOf('verified') < 0">
+      <mat-icon mat-list-icon>assignment_ind</mat-icon>
+      <h4 mat-line>{{u.username}} ({{u.email}})</h4>
+      <p mat-line> {{u.createdAt}} </p>
+      <button mat-raised-button color="warn" (click)="promptDelete(u.email)" [disabled]="u.roles.indexOf('system') > -1">Delete</button>
+    </mat-list-item>
+  </ng-container>
+</mat-list>

@@ -5,7 +5,11 @@
     <a class="links side" *ngIf="!user" (click)="openLoginDialog()"> Login </a>
     <div>
       <a class="links side" *ngIf="user" [matMenuTriggerFor]="menu">
-        <mat-icon>account_circle</mat-icon>{{user.username}}
+        <mat-icon *ngIf="user.isAdmin">face</mat-icon>
+        <mat-icon *ngIf="!user.isAdmin && user.isTrusted">account_circle</mat-icon>
+        <mat-icon *ngIf="!user.isAdmin && !user.isTrusted && user.isVerified">account_box</mat-icon>
+        <mat-icon *ngIf="!user.isAdmin && !user.isTrusted && !user.isVerified">assignment_ind</mat-icon>
+        {{user.username}}
       </a>
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngIf="user && user.isAdmin" [routerLink]="['/admin']"> Administration </button>

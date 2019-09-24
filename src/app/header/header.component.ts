@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../auth/auth.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { LoginComponent } from '../auth/login/login.component';
 
 @Component({
@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {}
@@ -27,6 +28,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
+    this._snackBar.open('Logging out', '', {duration: 2000});
     this.authService.signOut();
     this.navigate('');
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { User } from './user';
+import { MatSnackBar } from '@angular/material';
 
 
 @Component({
@@ -11,12 +12,19 @@ import { User } from './user';
 export class UserMgmtComponent implements OnInit {
   public users: User[];
 
-  constructor(private userService: UserService) {
+  constructor(
+    private _userService: UserService,
+    private _snackBar: MatSnackBar
+  ) {
     this.users = [];
   }
 
   public ngOnInit() {
-    this.userService.getUsers().subscribe(users => this.users = users);
+    this._userService.getUsers().subscribe(users => this.users = users);
+  }
+
+  promptDelete(email: string) {
+    this._snackBar.open(`Really delete <${email}>?`, 'Delete', {duration: 3000});
   }
 }
 

@@ -8,9 +8,13 @@ module.exports = router;
 
 router.use(passport.authenticate('jwt', { session: false }))
 
-router.route('/')
-  .post(asyncHandler(insert));
+router.get('/', asyncHandler(getAll));
+router.post('/', asyncHandler(insert));
 
+async function getAll(req, res) {
+  let users = await userCtrl.getAll();
+  res.json(users);
+}
 
 async function insert(req, res) {
   let user = await userCtrl.insert(req.body);
