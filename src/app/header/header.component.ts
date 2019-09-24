@@ -28,11 +28,10 @@ export class HeaderComponent implements OnInit {
 
   logout(): void {
     this.authService.signOut();
-    this.navigate('/auth/login');
+    this.navigate('');
   }
 
   navigate(link): void {
     this.router.navigate([link]);
   }
-
 }
