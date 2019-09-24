@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { User } from './user';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 
 @Component({
@@ -23,8 +23,17 @@ export class UserMgmtComponent implements OnInit {
     this._userService.getUsers().subscribe(users => this.users = users);
   }
 
-  promptDelete(email: string) {
-    this._snackBar.open(`Really delete <${email}>?`, 'Delete', {duration: 3000});
+  toggleRole(email: string, role: string): void {
+    /// TODO: toggle
+    this._snackBar.open(`User <${email}> switched to/from <${role}>`, '', {duration: 3000});
+  }
+
+  promptDelete(email: string): void {
+    this._snackBar.open(`Really delete user <${email}>?`, 'Delete', {panelClass: 'custom-snackbar-warning', duration: 5000})
+      .onAction().subscribe(() => {
+        // TODO: actually triger
+        console.log('delete triggered');
+      });
   }
 }
 

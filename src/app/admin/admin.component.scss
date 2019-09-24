@@ -5,3 +5,19 @@ mat-icon.tab-label-icon {
 .mat-list-icon {
   color: rgba(0, 0, 0, 0.54);
 }
+
+mat-list.user-list {
+  max-width: 60em;
+  margin: 0 auto;
+
+  .mat-roles-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  }
+  mat-checkbox {
+    margin-left: 1em;
+  }
+  button {
+    margin-left: 3em;
+  }
+}
