@@ -14,7 +14,8 @@ module.exports = {
   getAll,
   insert,
   assignRole,
-  revokeRole
+  revokeRole,
+  toggleRole
 }
 
 async function getAll() {
@@ -34,4 +35,13 @@ async function assignRole(userId, role) {
 
 async function revokeRole(userId, role) {   // requires testing still!
   return await User.updateOne({_id: userId}, {$pull: {roles: role}});
+}
+
+async function toggleRole(email, role, assign) {
+  userId = await User.find({email: email});
+  if (assign) {
+    return assignRole(userId, role);
+  } else {
+    return revokeRole(userId, role);
+  }
 }

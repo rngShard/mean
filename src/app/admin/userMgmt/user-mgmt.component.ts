@@ -20,19 +20,27 @@ export class UserMgmtComponent implements OnInit {
   }
 
   public ngOnInit() {
+    this._updateUsers();
+  }
+
+  private _updateUsers() {
     this._userService.getUsers().subscribe(users => this.users = users);
   }
 
-  toggleRole(email: string, role: string): void {
-    /// TODO: toggle
-    this._snackBar.open(`User <${email}> switched to/from <${role}>`, '', {duration: 3000});
+  toggleRole(email: string, role: string, checked: boolean): void {
+    this._userService.toggleRole(email, role, checked).subscribe(data => {
+      this._snackBar.open(`User <${email}> had <${role}> ${checked ? "assigned" : "revoked"}`, '', {duration: 3000});
+      this._updateUsers();
+    }, error =>
+      this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
+        .onAction().subscribe(() => window.alert(JSON.stringify(error))));
   }
 
   promptDelete(email: string): void {
     this._snackBar.open(`Really delete user <${email}>?`, 'Delete', {panelClass: 'custom-snackbar-warning', duration: 5000})
       .onAction().subscribe(() => {
         // TODO: actually triger
-        console.log('delete triggered');
+        window.alert('delete triggered');
       });
   }
 }
