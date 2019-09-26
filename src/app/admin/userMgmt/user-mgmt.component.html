@@ -8,9 +8,18 @@
       <h4 mat-line>{{u.username}} ({{u.email}})</h4>
       <p mat-line> {{u.createdAt}} </p>
 
-      <mat-checkbox [checked]="u.roles.indexOf('verified') > -1" (change)="toggleRole(u.email, 'verified', $event.checked)" [disabled]="true"> Verified </mat-checkbox>
+      <mat-checkbox [checked]="u.roles.indexOf('verified') > -1" (change)="toggleRole(u.email, 'verified', $event.checked)"
+        [disabled]="true" i18n-matTooltip matTooltip="Verification may only be done via email-link" matTooltipShowDelay="300"> Verified </mat-checkbox>
       <mat-checkbox [checked]="u.roles.indexOf('trusted') > -1" (change)="toggleRole(u.email, 'trusted', $event.checked)"> Trusted </mat-checkbox>
       <mat-checkbox [checked]="u.roles.indexOf('admin') > -1" (change)="toggleRole(u.email, 'admin', $event.checked)"> Admin </mat-checkbox>
-      <button mat-raised-button color="warn" (click)="promptDelete(u.email)" [disabled]="u.roles.indexOf('system') > -1">Delete</button>
+      <ng-container *ngIf="u.roles.indexOf('system') < 0; then deleteButton else disabledDeleteButton"></ng-container>
+      <ng-template #deleteButton>
+          <button mat-raised-button color="warn" (click)="promptDelete(u.email)"> Delete </button>
+      </ng-template>
+      <ng-template #disabledDeleteButton>
+        <button mat-raised-button color="warn" (click)="promptDelete(u.email)" disabled i18n-matTooltip matTooltip="Cannot delete system-accounts"> Delete </button>        
+      </ng-template>
+      
+      
     </mat-list-item>
   </ng-container>

@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">
     <a [routerLink]="['/']" class="logo"></a>
     <span class="example-spacer"></span>
-    <a class="links side" *ngIf="!user" (click)="openLoginDialog()"> Login </a>
+    <a class="links side" *ngIf="!user" (click)="openLoginDialog()" i18n="@@loginDirective"> Login </a>
     <div>
       <a class="links side" *ngIf="user" [matMenuTriggerFor]="menu">
         <mat-icon *ngIf="user.isAdmin">face</mat-icon>
@@ -12,8 +12,8 @@
         {{user.username}}
       </a>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngIf="user && user.isAdmin" [routerLink]="['/admin']"> Administration </button>
-        <button mat-menu-item (click)="logout()"> Logout </button>
+        <button mat-menu-item *ngIf="user && user.isAdmin" [routerLink]="['/admin']" i18n="Admin page header|Menu entry that navigates to the Admin page"> Administration </button>
+        <button mat-menu-item (click)="logout()" i18n="@@logoutDirective"> Logout </button>
       </mat-menu>
     </div>
   </mat-toolbar>
