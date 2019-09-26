@@ -8,10 +8,10 @@ const routes: Routes = [{
   component: HomeComponent
 }, {
   path: 'auth',
-  loadChildren: () => import('app/auth/auth.module').then(m => m.AuthModule)
+  loadChildren: () => import('../../app/auth/auth.module').then(m => m.AuthModule)
 }, {
   path: 'admin',
-  loadChildren: () => import('app/admin/admin.module').then(m => m.AdminModule)
+  loadChildren: () => import('../../app/admin/admin.module').then(m => m.AdminModule)
 }];
 
 @NgModule({
