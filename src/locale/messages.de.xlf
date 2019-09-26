@@ -4,7 +4,7 @@
     <body>
       <trans-unit id="4c82cfbc9bed153ae2eb21ae7b63b9ec632a2010" datatype="html">
         <source> Login </source>
-        <target state="new"> Login </target>
+        <target state="final"> Anmelden </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/login/login.component.html</context>
           <context context-type="linenumber">1</context>
@@ -14,7 +14,7 @@
       </trans-unit>
       <trans-unit id="ca76d2d0fc7238d7247b5433e4b8d2211d39a4f6" datatype="html">
         <source>Email</source>
-        <target state="new">Email</target>
+        <target state="final">Email</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/login/login.component.html</context>
           <context context-type="linenumber">8</context>
@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="119c83365b3e1269993a22846f282c1b5360f54d" datatype="html">
         <source>Password</source>
-        <target state="new">Password</target>
+        <target state="final">Passwort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/login/login.component.html</context>
           <context context-type="linenumber">15</context>
@@ -46,7 +46,7 @@
       </trans-unit>
       <trans-unit id="e9d505c7a7e2f347684a090a0dac40fd96970e2f" datatype="html">
         <source> New here? Register! </source>
-        <target state="new"> New here? Register! </target>
+        <target state="final"> Neu registriere </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/login/login.component.html</context>
           <context context-type="linenumber">24</context>
@@ -74,7 +74,7 @@
       </trans-unit>
       <trans-unit id="4044d0421d2e9478dc1ebcf7a0d3fb8801823dd6" datatype="html">
         <source> Register </source>
-        <target state="new"> Register </target>
+        <target state="final"> Registrieren </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/register/register.component.html</context>
           <context context-type="linenumber">3</context>
@@ -83,7 +83,7 @@
       </trans-unit>
       <trans-unit id="52aa88fdcb280df4734b4ea12ebdc834421e85b7" datatype="html">
         <source>Username</source>
-        <target state="new">Username</target>
+        <target state="final">Benutzername</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/register/register.component.html</context>
           <context context-type="linenumber">9</context>
@@ -93,7 +93,7 @@
       </trans-unit>
       <trans-unit id="a018804f62697e41a2bd2a26814a1f7b95512015" datatype="html">
         <source>Email</source>
-        <target state="new">Email</target>
+        <target state="final">Email</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/register/register.component.html</context>
           <context context-type="linenumber">12</context>
@@ -103,7 +103,7 @@
       </trans-unit>
       <trans-unit id="9d0502e1928f44ea377fabc5f7dc9b9061ef3bcf" datatype="html">
         <source>Password</source>
-        <target state="new">Password</target>
+        <target state="final">Passwort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/register/register.component.html</context>
           <context context-type="linenumber">16</context>
@@ -113,7 +113,7 @@
       </trans-unit>
       <trans-unit id="79ff8e2af0a0d30db960f97d32a09ce013f654a4" datatype="html">
         <source>Reapet Password</source>
-        <target state="new">Reapet Password</target>
+        <target state="final">Passwort wiederholen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/register/register.component.html</context>
           <context context-type="linenumber">19</context>
@@ -123,7 +123,7 @@
       </trans-unit>
       <trans-unit id="277c5ca309aebcb5ffe1ba8b9495465d075f5167" datatype="html">
         <source>Register</source>
-        <target state="new">Register</target>
+        <target state="final">Registrieren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/auth/register/register.component.html</context>
           <context context-type="linenumber">26</context>
@@ -133,7 +133,7 @@
       </trans-unit>
       <trans-unit id="ae92a2710e48dedd3d5155af362947e728d73789" datatype="html">
         <source> User Management </source>
-        <target state="new"> User Management </target>
+        <target state="final"> Benutzerverwaltung </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/admin.component.html</context>
           <context context-type="linenumber">5</context>
@@ -143,7 +143,7 @@
       </trans-unit>
       <trans-unit id="7537cc92c63c7440f71c78faa7ec8aa948454452" datatype="html">
         <source> Statistics </source>
-        <target state="new"> Statistics </target>
+        <target state="final"> Statistiken </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/admin.component.html</context>
           <context context-type="linenumber">12</context>
@@ -161,7 +161,7 @@
       </trans-unit>
       <trans-unit id="daa52b3eb35d393bd15ae121c96b502ef4011163" datatype="html">
         <source> Delete </source>
-        <target state="new"> Delete </target>
+        <target state="final"> Löschen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
           <context context-type="linenumber">18</context>
