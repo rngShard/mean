@@ -1,5 +1,5 @@
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { TokenStorage } from '../auth/token.storage';
 
 export class AuthHeaderInterceptor implements HttpInterceptor {
