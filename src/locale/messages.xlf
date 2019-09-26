@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="loginDirective" datatype="html">
+        <source> Login </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="49bf093f2cdd19e42397ba4791a0f66d3f93221d" datatype="html">
+        <source> Administration </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Menu entry that navigates to the Admin page</note>
+        <note priority="1" from="meaning">Admin page header</note>
+      </trans-unit>
+      <trans-unit id="logoutDirective" datatype="html">
+        <source> Logout </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dd62e8b518eb15e0862a4262a6b9f37a5242e18c" datatype="html">
+        <source>Verification may only be done via email-link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d9675712d50df2755f4551b624878912f45568e7" datatype="html">
+        <source>Cannot delete system-accounts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gen-trans-src": "ng xi18n"
+    "gen-i18n-src": "ng xi18n --output-path locale"
   },
   "private": true,
   "dependencies": {
