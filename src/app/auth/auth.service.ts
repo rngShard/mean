@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 import { TokenStorage } from './token.storage';
-import { TooltipComponent } from '@angular/material';
+import { TooltipComponent } from '@angular/material/tooltip';
 
 @Injectable()
 export class AuthService {

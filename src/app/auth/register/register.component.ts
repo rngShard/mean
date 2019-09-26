@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/f
 
 
 import { AuthService } from '../auth.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
