@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable, Subject } from 'rxjs';
 
 import { TokenStorage } from './token.storage';
-import { TooltipComponent } from '@angular/material';
+import { TooltipComponent } from '@angular/material/tooltip';
 
 @Injectable()
 export class AuthService {
