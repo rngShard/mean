@@ -1,28 +1,28 @@
 <mat-card class="register-card">
   <mat-card-header>
-    <mat-card-title> Register </mat-card-title>
+    <mat-card-title i18n="Heading for registration card panel"> Register </mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <form [formGroup]="userForm">
       <div class="registrationForm">
         <mat-form-field>
-          <input matInput placeholder="Username" formControlName="username" name="username" required>
+          <input matInput i18n-placeholder="Registration form|Username placeholder" placeholder="Username" formControlName="username" name="username" required>
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Email" formControlName="email" name="email" required>
+          <input matInput i18n-placeholder="Registration form|Email placeholder" placeholder="Email" formControlName="email" name="email" required>
           <mat-error *ngIf="email.invalid && email.errors.email">Invalid email address</mat-error>
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Password" formControlName="password" type="password" name="password" required>
+          <input matInput i18n-placeholder="Registration form|Password placeholder" placeholder="Password" formControlName="password" type="password" name="password" required>
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Reapet Password" formControlName="repeatPassword" type="password" name="repeatPassword" required>
+          <input matInput i18n-placeholder="Registration form|Repeat password placeholder" placeholder="Reapet Password" formControlName="repeatPassword" type="password" name="repeatPassword" required>
           <mat-error *ngIf="repeatPassword.invalid && repeatPassword.errors.passwordMatch">Password mismatch</mat-error>
         </mat-form-field>
       </div>
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="register()" color="primary">Register</button>
+    <button mat-raised-button (click)="register()" color="primary" i18n="Registration form|Caption of button to register">Register</button>
   </mat-card-actions>
 </mat-card>

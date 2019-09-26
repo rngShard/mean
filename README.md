@@ -9,6 +9,18 @@ MEAN is a set of Open Source components that together, provide an end-to-end fra
 - **N**ode.js : JavaScript runtime environment – lets you implement your application back-end in JavaScript
 
 
+## Boilerplate Featureset
+
+This boilerpalte packs ootb functionality of
+
+- User-management
+  - deployment-script automatically generates 2 default system-users (admin- + test-user)
+  - incorporated role-management (predefined roles: _verified_, _trusted_, _admin_, _system_)
+- Internationalized (via Angular)
+  - extraction & merging of i18n-strings automated via npm script
+  - predefined languages: _en_ (default of app), _de_
+
+
 ## Setup
 
 This includes requirements, installation & deploy.

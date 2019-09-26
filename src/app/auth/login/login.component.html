@@ -1,18 +1,18 @@
-<h1 mat-dialog-title> Login </h1>
+<h1 mat-dialog-title i18n="Login Dialog|Dialog header for login"> Login </h1>
 <div mat-dialog-content>
   <form class="example-form">
     <table cellspacing="0">
       <tr>
         <td>
           <mat-form-field>
-            <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+            <input matInput i18n-placeholder="Login Form|Email placeholder" placeholder="Email" [(ngModel)]="email" name="email" required>
           </mat-form-field>
         </td>
       </tr>
       <tr>
         <td>
           <mat-form-field>
-            <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+            <input matInput i18n-placeholder="Login Form|Password placeholder" placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
           </mat-form-field>
         </td>
       </tr>
@@ -20,6 +20,6 @@
   </form>
 </div>
 <div mat-dialog-actions>
-  <button mat-raised-button (click)="login()" color="primary" cdkFocusInitial> Login </button>
-  <button mat-button routerLink="/auth/register" [mat-dialog-close]> New here? Register! </button>
+  <button mat-raised-button (click)="login()" color="primary" cdkFocusInitial i18n="@@loginDirective"> Login </button>
+  <button mat-button routerLink="/auth/register" [mat-dialog-close] i18n="Login Dialog|Button prompt for registering new account"> New here? Register! </button>
 </div>

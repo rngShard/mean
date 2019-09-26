@@ -12,7 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gen-i18n-src": "ng xi18n --output-path locale"
+    "extract-i18n-en-de": "ng xi18n --output-path locale && xliffmerge --profile src/xliffmerge.json en de"
   },
   "private": true,
   "dependencies": {
@@ -79,6 +79,7 @@
     "karma-coverage-istanbul-reporter": "2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "1.4.2",
+    "ngx-i18nsupport": "^0.17.1",
     "protractor": "^5.4.1",
     "ts-node": "~8.4.1",
     "tslint": "~5.20.0",

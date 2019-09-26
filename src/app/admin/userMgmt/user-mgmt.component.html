@@ -14,10 +14,13 @@
       <mat-checkbox [checked]="u.roles.indexOf('admin') > -1" (change)="toggleRole(u.email, 'admin', $event.checked)"> Admin </mat-checkbox>
       <ng-container *ngIf="u.roles.indexOf('system') < 0; then deleteButton else disabledDeleteButton"></ng-container>
       <ng-template #deleteButton>
-          <button mat-raised-button color="warn" (click)="promptDelete(u.email)"> Delete </button>
+          <button mat-raised-button color="warn" (click)="promptDelete(u.email)"
+          i18n="Caption of button to delete user account"> Delete </button>
       </ng-template>
       <ng-template #disabledDeleteButton>
-        <button mat-raised-button color="warn" (click)="promptDelete(u.email)" disabled i18n-matTooltip matTooltip="Cannot delete system-accounts"> Delete </button>        
+        <button mat-raised-button color="warn" (click)="promptDelete(u.email)"
+          disabled i18n-matTooltip="tooltop|Prompting that system accounts cannot be deleted" matTooltip="Cannot delete system-accounts"
+          i18n="Caption of button to delete user account"> Delete </button>        
       </ng-template>
       
       
