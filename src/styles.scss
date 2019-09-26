@@ -17,3 +17,16 @@ body {
     font-family: 'Exo', sans-serif;
   }
 }
+
+.custom-snackbar-warning {
+  // background-color: goldenrod;
+  // color: grey;
+  button {
+    background-color: #f44336;
+    color: white;
+  }
+}
+.custom-snackbar-error {
+  background-color: #f44336;
+  color: white;
+}

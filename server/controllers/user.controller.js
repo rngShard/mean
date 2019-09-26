@@ -3,16 +3,24 @@ const Joi = require('joi');
 const User = require('../models/user.model');
 
 const userSchema = Joi.object({
-  fullname: Joi.string().required(),
+  username: Joi.string().required(),
   email: Joi.string().email(),
-  mobileNumber: Joi.string().regex(/^[1-9][0-9]{9}$/),
   password: Joi.string().required(),
   repeatPassword: Joi.string().required().valid(Joi.ref('password'))
 })
 
 
 module.exports = {
-  insert
+  getAll,
+  insert,
+  deleteUser,
+  assignRole,
+  revokeRole,
+  toggleRole
+}
+
+async function getAll() {
+  return await User.find();
 }
 
 async function insert(user) {
@@ -20,4 +28,25 @@ async function insert(user) {
   user.hashedPassword = bcrypt.hashSync(user.password, 10);
   delete user.password;
   return await new User(user).save();
+}
+
+async function deleteUser(email) {
+  return await User.deleteOne({email: email});
+}
+
+async function assignRole(userId, role) {
+  return await User.updateOne({_id: userId}, {$addToSet: {roles: role}});
+}
+
+async function revokeRole(userId, role) {   // requires testing still!
+  return await User.updateOne({_id: userId}, {$pull: {roles: role}});
+}
+
+async function toggleRole(email, role, assign) {
+  userId = await User.find({email: email});
+  if (assign) {
+    return assignRole(userId, role);
+  } else {
+    return revokeRole(userId, role);
+  }
 }

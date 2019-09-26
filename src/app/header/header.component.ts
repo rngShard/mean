@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../auth/auth.service';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginComponent } from '../auth/login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -14,19 +17,24 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
-  ) { }
+    private router: Router,
+    public dialog: MatDialog,
+    private _snackBar: MatSnackBar
+  ) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  openLoginDialog(): void {
+    const dialogRef = this.dialog.open(LoginComponent, {});
   }
 
   logout(): void {
+    this._snackBar.open('Logging out', '', {duration: 2000});
     this.authService.signOut();
-    this.navigate('/auth/login');
+    this.navigate('');
   }
 
   navigate(link): void {
     this.router.navigate([link]);
   }
-
 }
