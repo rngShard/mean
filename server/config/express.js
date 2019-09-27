@@ -20,26 +20,23 @@ if (config.env === 'development') {
   app.use(logger('dev'));
 }
 
-// Choose what fronten framework to serve the dist from
-var distDir = '../../dist/';
-if (config.frontend == 'react'){
-  distDir ='../../node_modules/material-dashboard-react/dist'
- }else{
-  distDir ='../../dist/' ;
- }
+var distDir = '../../dist';
 
-// 
-app.use(express.static(path.join(__dirname, distDir)))
-app.use(/^((?!(api)).)*/, (req, res) => {
-  res.sendFile(path.join(__dirname, distDir + '/index.html'));
+/* Separate sub-applications for each language */
+const app_en = express();
+app_en.use(express.static(path.join(__dirname, distDir, 'en')));
+app_en.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, distDir, 'en' + '/index.html'));
 });
 
-console.log(distDir);
- //React server
-app.use(express.static(path.join(__dirname, '../../node_modules/material-dashboard-react/dist')))
-app.use(/^((?!(api)).)*/, (req, res) => {
-res.sendFile(path.join(__dirname, '../../dist/index.html'));
-}); 
+const app_de = express();
+app_de.use(express.static(path.join(__dirname, distDir, 'de')));
+app_de.use('/', (req, res) => {
+  res.sendFile(path.join(__dirname, distDir, 'de', '/index.html'));
+});
+
+app.use('/en', app_en);
+app.use('/de', app_de);
 
 
 app.use(bodyParser.json());
@@ -49,34 +46,26 @@ app.use(cookieParser());
 app.use(compress());
 app.use(methodOverride());
 
-// secure apps by setting various HTTP headers
-app.use(helmet());
+app.use(helmet());  // secure apps by setting various HTTP headers
 
-// enable CORS - Cross Origin Resource Sharing
-app.use(cors());
+app.use(cors());  // enable CORS - Cross Origin Resource Sharing
 
 app.use(passport.initialize());
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// API router
-app.use('/api/', routes);
+app.use('/api/', routes); // API router
 
-// catch 404 and forward to error handler
-app.use((req, res, next) => {
+app.use((req, res, next) => { // catch 404 and forward to error handler
   const err = new httpError(404)
   return next(err);
 });
 
-// error handler, send stacktrace only during development
-app.use((err, req, res, next) => {
-
-  // customize Joi validation errors
-  if (err.isJoi) {
+app.use((err, req, res, next) => {  // error handler, send stacktrace only during development
+  if (err.isJoi) {  // customize Joi validation errors
     err.message = err.details.map(e => e.message).join("; ");
     err.status = 400;
   }
-
   res.status(err.status || 500).json({
     message: err.message
   });
