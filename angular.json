@@ -24,33 +24,17 @@
               "src/styles.scss"
             ],
             "scripts": [],
+            "aot": true,
             "i18nFormat": "xlf",
-            "aot": true
+            "i18nMissingTranslation": "ignore"
           },
           "configurations": {
-            "en": {
-              "aot": true,
-              "outputPath": "dist/en/",
-              "baseHref": "/en/",
-              "i18nFile": "src/locale/messages.en.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "en"
-            },
-            "de": {
-              "aot": true,
-              "outputPath": "dist/de/",
-              "baseHref": "/de/",
-              "i18nFile": "src/locale/messages.de.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "de"
-            },
             "production": {
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -69,12 +53,6 @@
             "browserTarget": "angular-material:build"
           },
           "configurations": {
-            "en": {
-              "browserTarget": "angular-material:build:en"
-            },
-            "de": {
-              "browserTarget": "angular-material:build:de"
-            },
             "production": {
               "browserTarget": "angular-material:build:production"
             }

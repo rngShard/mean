@@ -20,23 +20,20 @@ if (config.env === 'development') {
   app.use(logger('dev'));
 }
 
-var distDir = '../../dist';
 
 /* Separate sub-applications for each language */
-const app_en = express();
-app_en.use(express.static(path.join(__dirname, distDir, 'en')));
-app_en.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, distDir, 'en' + '/index.html'));
-});
+var distDir = '../../dist';
+const langs = ['en', 'de'];
 
-const app_de = express();
-app_de.use(express.static(path.join(__dirname, distDir, 'de')));
-app_de.use('/', (req, res) => {
-  res.sendFile(path.join(__dirname, distDir, 'de', '/index.html'));
-});
-
-app.use('/en', app_en);
-app.use('/de', app_de);
+for (let lang of langs) {
+  const app_lang = express();
+  app_lang.use(express.static(path.join(__dirname, distDir, lang)));
+  app_lang.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, distDir, lang + '/index.html'));
+  });
+  app.use('/' + lang, app_lang);
+}
+app.get('/', (req, res) => res.redirect('/en'));  // default page English (TODO: read browser config, redirect to user's dominant language)
 
 
 app.use(bodyParser.json());
