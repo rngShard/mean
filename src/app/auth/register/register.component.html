@@ -23,6 +23,9 @@
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="register()" color="primary" i18n="Registration form|Caption of button to register">Register</button>
+    <button mat-raised-button (click)="register(success.msg, mailInUseErr.msg)" color="primary" i18n="Registration form|Caption of button to register">Register</button>
   </mat-card-actions>
 </mat-card>
+
+<app-snackbar-message #success msg="Registration successful! An email was sent for confirmation" i18n-msg="Register success and inform of registraion mail"></app-snackbar-message>
+<app-snackbar-message #mailInUseErr msg="Email already in use" i18n-msg="Email already in use error prompt"></app-snackbar-message>

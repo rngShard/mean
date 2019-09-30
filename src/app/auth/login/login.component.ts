@@ -22,13 +22,13 @@ export class LoginComponent {
   email: string;
   password: string;
 
-  login(): void {
+  login(successMsg: string, deniedMsg: string): void {
     this.authService.login(this.email, this.password).subscribe(data => {
-      this._snackBar.open('Login successful, Welcome!', '', {duration: 2000});
+      this._snackBar.open(successMsg, '', {duration: 2000});
       this.dialogRef.close();
       this.router.navigate(['']);
     }, error => {
-      this._snackBar.open('Login failed', '', {duration: 2000});
+      this._snackBar.open(deniedMsg, '', {duration: 2000});
     });
   }
 }

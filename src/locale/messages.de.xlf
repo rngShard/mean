@@ -54,6 +54,24 @@
         <note priority="1" from="description">Button prompt for registering new account</note>
         <note priority="1" from="meaning">Login Dialog</note>
       </trans-unit>
+      <trans-unit id="9844af42b9df381eb09df50f0f2ca083cb2f25d7" datatype="html">
+        <source>Login successful, Welcome!</source>
+        <target state="final">Anmeldung erfolgreich, Willkommen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Welcoming message after successful login</note>
+      </trans-unit>
+      <trans-unit id="d137cb958419ea04cdd76df13f4c7e5bf8f8b319" datatype="html">
+        <source>Login failed</source>
+        <target state="final">Fehler bei der Anmeldung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Login not successful message prompt</note>
+      </trans-unit>
       <trans-unit id="49bf093f2cdd19e42397ba4791a0f66d3f93221d" datatype="html">
         <source> Administration </source>
         <target state="final"> Administration </target>
@@ -74,12 +92,12 @@
       </trans-unit>
       <trans-unit id="5968ef84e7c2774c73d630956f94e77dddb74714" datatype="html">
         <source>Logging out</source>
-        <target state="new">Abgemeldet</target>
+        <target state="final">Abgemeldet</target>
+        <note priority="1" from="description">log-out message</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
-        <note priority="1" from="description">log-out message</note>
       </trans-unit>
       <trans-unit id="4044d0421d2e9478dc1ebcf7a0d3fb8801823dd6" datatype="html">
         <source> Register </source>
@@ -140,6 +158,24 @@
         <note priority="1" from="description">Caption of button to register</note>
         <note priority="1" from="meaning">Registration form</note>
       </trans-unit>
+      <trans-unit id="7f5393141a5af238263f57b2bb93e4280fd86cb1" datatype="html">
+        <source>Registration successful! An email was sent for confirmation</source>
+        <target state="final">Registrierung erfolgreich! Eine Email mit Verifizierungslink wurde versendet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Register success and inform of registraion mail</note>
+      </trans-unit>
+      <trans-unit id="3cc5ba0c41511e33cd997bc8fbd07f04a90a2f05" datatype="html">
+        <source>Email already in use</source>
+        <target state="final">Es existiert bereits ein Account mit dieser Email-Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Email already in use error prompt</note>
+      </trans-unit>
       <trans-unit id="ae92a2710e48dedd3d5155af362947e728d73789" datatype="html">
         <source> User Management </source>
         <target state="final"> Benutzerverwaltung </target>
@@ -168,7 +204,7 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="daa52b3eb35d393bd15ae121c96b502ef4011163" datatype="html">
+      <trans-unit id="deleteDirective" datatype="html">
         <source> Delete </source>
         <target state="final"> Löschen </target>
         <context-group purpose="location">
@@ -177,9 +213,17 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="daa52b3eb35d393bd15ae121c96b502ef4011163" datatype="html">
+        <source> Delete </source>
+        <target state="final"> Löschen </target>
+        <note priority="1" from="description">Caption of button to delete user account</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
           <context context-type="linenumber">23</context>
         </context-group>
-        <note priority="1" from="description">Caption of button to delete user account</note>
       </trans-unit>
       <trans-unit id="ec7e80656c9cb35883190f773d2f8b65675797e7" datatype="html">
         <source>Cannot delete system-accounts</source>
@@ -190,6 +234,43 @@
         </context-group>
         <note priority="1" from="description">Prompting that system accounts cannot be deleted</note>
         <note priority="1" from="meaning">tooltop</note>
+      </trans-unit>
+      <trans-unit id="0a904ed3005710beb3130222ab5783a8f2863339" datatype="html">
+        <source>Really delete user?</source>
+        <target state="final">Benutzer wirklich löschen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Prompt asking if user (email given) should really be deleted</note>
+      </trans-unit>
+      <trans-unit id="f82005226520d32abd68d8739ee9807e7ffce1d0" datatype="html">
+        <source>User was deleted</source>
+        <target state="final">Benutzer wurde gelöscht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Selected user was successfully deleted</note>
+        <note priority="1" from="meaning">Feedback prompt</note>
+      </trans-unit>
+      <trans-unit id="d62cc037fa3643a49a559225754ef2850e6238e9" datatype="html">
+        <source>User (1) had role (2) assigned</source>
+        <target state="final">Benutzer (1) hat die Rolle (2) zugewiesen bekommen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Feedback of toggling on role for user</note>
+      </trans-unit>
+      <trans-unit id="9bb342082d3db5e270bd9297f9478b986578c662" datatype="html">
+        <source>User (1) had role (2) revoked</source>
+        <target state="final">Von Benutzer (1) wurde die Rolle (2) entfernt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Feedback of toggling off role for user</note>
       </trans-unit>
     </body>
   </file>

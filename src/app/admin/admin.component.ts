@@ -9,5 +9,3 @@ export class AdminComponent {
 
   constructor() {}
 }
-
-
