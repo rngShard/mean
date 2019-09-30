@@ -38,7 +38,7 @@ export class RegisterComponent {
   get password(): any { return this.userForm.get('password'); }
   get repeatPassword(): any { return this.userForm.get('repeatPassword'); }
 
-  register() {
+  register(successMsg: string, mailErrorMsg: string) {
     if(!this.userForm.valid) return;
 
     let {
@@ -49,12 +49,13 @@ export class RegisterComponent {
     } = this.userForm.getRawValue();
 
     this._authService.register(username, email, password, repeatPassword).subscribe(data => {
+      this._snackBar.open(successMsg, '', {duration: 2000});
       this._router.navigate(['']);
     }, err => {
       if (err.error.message.indexOf("E11000 duplicate key error") > -1) { // only email is unique (see user.model.js in backend)
-        this._snackBar.open('Email already in use.', '', {panelClass: 'custom-snackbar-error', duration: 4000});
+        this._snackBar.open(mailErrorMsg, '', {panelClass: 'custom-snackbar-error', duration: 4000});
       } else {
-        this._snackBar.open('An error occured.', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
+        this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
         .onAction().subscribe(() => window.alert(JSON.stringify(err)));
       }
     })

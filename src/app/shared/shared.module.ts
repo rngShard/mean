@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import 'hammerjs';  // init. from Tooltips (warning in console "Could not find HammerJS. Certain Angular Material components may not work correctly.")
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -21,6 +22,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatTooltipModule } from '@angular/material';
+
+import { SnackbarMessageComponent } from './snackbar-message.component';
 
 const modules = [
   CommonModule,
@@ -44,12 +48,18 @@ const modules = [
   MatFormFieldModule,
   MatSelectModule,
   FlexLayoutModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatTooltipModule
 ];
 
 @NgModule({
+  declarations: [
+    SnackbarMessageComponent
+  ],
   imports: [...modules],
-  exports: [...modules],
-  declarations: [],
+  exports: [
+    ...modules,
+    SnackbarMessageComponent
+  ]
 })
 export class SharedModule {}

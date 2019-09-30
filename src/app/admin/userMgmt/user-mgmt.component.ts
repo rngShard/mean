@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { User } from './user';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -27,19 +27,20 @@ export class UserMgmtComponent implements OnInit {
     this._userService.getUsers().subscribe(users => this.users = users);
   }
 
-  toggleRole(email: string, role: string, checked: boolean): void {
+  toggleRole(email: string, role: string, checked: boolean, assignMsg: string, revokeMsg: string): void {
+    console.log(assignMsg, revokeMsg);
     this._userService.toggleRole(email, role, checked).subscribe(data => {
-      this._snackBar.open(`User <${email}> had <${role}> ${checked ? "assigned" : "revoked"}`, '', {duration: 3000});
+      this._snackBar.open(`${checked ? assignMsg : revokeMsg} [${email}, ${role}]`, '', {duration: 3000});
       this._updateUsers();
     }, error => this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
         .onAction().subscribe(() => window.alert(JSON.stringify(error))));
   }
 
-  promptDelete(email: string): void {
-    this._snackBar.open(`Really delete user <${email}>?`, 'Delete', {panelClass: 'custom-snackbar-warning', duration: 5000})
+  promptDelete(msg: string, actionMsg: string, email: string, delSuccessMsg: string): void {
+    this._snackBar.open(msg + ` [${email}]`, actionMsg, {panelClass: 'custom-snackbar-warning', duration: 5000})
       .onAction().subscribe(() => {
         this._userService.deleteUser(email).subscribe(data => {
-          this._snackBar.open(`User <${email}> was deleted`, '', {duration: 3000});
+          this._snackBar.open(delSuccessMsg, '', {duration: 3000});
           this._updateUsers();
         }, error => this._snackBar.open('Something went wrong', 'Alert error', {panelClass: 'custom-snackbar-error', duration: 4000})
             .onAction().subscribe(() => window.alert(JSON.stringify(error))));
