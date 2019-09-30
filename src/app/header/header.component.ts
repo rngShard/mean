@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../auth/auth.service';
@@ -11,7 +11,8 @@ import { LoginComponent } from '../auth/login/login.component';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  logoutMsg: String;
 
   @Input() user: any = {};
 
@@ -22,14 +23,12 @@ export class HeaderComponent implements OnInit {
     private _snackBar: MatSnackBar
   ) {}
 
-  ngOnInit() {}
-
   openLoginDialog(): void {
     const dialogRef = this.dialog.open(LoginComponent, {});
   }
 
-  logout(): void {
-    this._snackBar.open('Logging out', '', {duration: 2000});
+  logout(msg: string): void {
+    this._snackBar.open(msg, '', {duration: 2000});
     this.authService.signOut();
     this.navigate('');
   }

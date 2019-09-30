@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="de">
+    <body>
+      <trans-unit id="4c82cfbc9bed153ae2eb21ae7b63b9ec632a2010" datatype="html">
+        <source> Login </source>
+        <target state="final"> Anmelden </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Dialog header for login</note>
+        <note priority="1" from="meaning">Login Dialog</note>
+      </trans-unit>
+      <trans-unit id="ca76d2d0fc7238d7247b5433e4b8d2211d39a4f6" datatype="html">
+        <source>Email</source>
+        <target state="final">Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Email placeholder</note>
+        <note priority="1" from="meaning">Login Form</note>
+      </trans-unit>
+      <trans-unit id="119c83365b3e1269993a22846f282c1b5360f54d" datatype="html">
+        <source>Password</source>
+        <target state="final">Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Password placeholder</note>
+        <note priority="1" from="meaning">Login Form</note>
+      </trans-unit>
+      <trans-unit id="loginDirective" datatype="html">
+        <source> Login </source>
+        <target state="final"> Anmelden </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9d505c7a7e2f347684a090a0dac40fd96970e2f" datatype="html">
+        <source> New here? Register! </source>
+        <target state="final"> Neu registrieren </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Button prompt for registering new account</note>
+        <note priority="1" from="meaning">Login Dialog</note>
+      </trans-unit>
+      <trans-unit id="9844af42b9df381eb09df50f0f2ca083cb2f25d7" datatype="html">
+        <source>Login successful, Welcome!</source>
+        <target state="final">Anmeldung erfolgreich, Willkommen!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Welcoming message after successful login</note>
+      </trans-unit>
+      <trans-unit id="d137cb958419ea04cdd76df13f4c7e5bf8f8b319" datatype="html">
+        <source>Login failed</source>
+        <target state="final">Fehler bei der Anmeldung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/login/login.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Login not successful message prompt</note>
+      </trans-unit>
+      <trans-unit id="49bf093f2cdd19e42397ba4791a0f66d3f93221d" datatype="html">
+        <source> Administration </source>
+        <target state="final"> Administration </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Menu entry that navigates to the Admin page</note>
+        <note priority="1" from="meaning">Admin page header</note>
+      </trans-unit>
+      <trans-unit id="logoutDirective" datatype="html">
+        <source> Logout </source>
+        <target state="final"> Abmelden </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5968ef84e7c2774c73d630956f94e77dddb74714" datatype="html">
+        <source>Logging out</source>
+        <target state="final">Abgemeldet</target>
+        <note priority="1" from="description">log-out message</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4044d0421d2e9478dc1ebcf7a0d3fb8801823dd6" datatype="html">
+        <source> Register </source>
+        <target state="final"> Registrieren </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Heading for registration card panel</note>
+      </trans-unit>
+      <trans-unit id="52aa88fdcb280df4734b4ea12ebdc834421e85b7" datatype="html">
+        <source>Username</source>
+        <target state="final">Benutzername</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Username placeholder</note>
+        <note priority="1" from="meaning">Registration form</note>
+      </trans-unit>
+      <trans-unit id="a018804f62697e41a2bd2a26814a1f7b95512015" datatype="html">
+        <source>Email</source>
+        <target state="final">Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Email placeholder</note>
+        <note priority="1" from="meaning">Registration form</note>
+      </trans-unit>
+      <trans-unit id="9d0502e1928f44ea377fabc5f7dc9b9061ef3bcf" datatype="html">
+        <source>Password</source>
+        <target state="final">Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Password placeholder</note>
+        <note priority="1" from="meaning">Registration form</note>
+      </trans-unit>
+      <trans-unit id="79ff8e2af0a0d30db960f97d32a09ce013f654a4" datatype="html">
+        <source>Reapet Password</source>
+        <target state="final">Passwort wiederholen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Repeat password placeholder</note>
+        <note priority="1" from="meaning">Registration form</note>
+      </trans-unit>
+      <trans-unit id="277c5ca309aebcb5ffe1ba8b9495465d075f5167" datatype="html">
+        <source>Register</source>
+        <target state="final">Registrieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Caption of button to register</note>
+        <note priority="1" from="meaning">Registration form</note>
+      </trans-unit>
+      <trans-unit id="7f5393141a5af238263f57b2bb93e4280fd86cb1" datatype="html">
+        <source>Registration successful! An email was sent for confirmation</source>
+        <target state="final">Registrierung erfolgreich! Eine Email mit Verifizierungslink wurde versendet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Register success and inform of registraion mail</note>
+      </trans-unit>
+      <trans-unit id="3cc5ba0c41511e33cd997bc8fbd07f04a90a2f05" datatype="html">
+        <source>Email already in use</source>
+        <target state="final">Es existiert bereits ein Account mit dieser Email-Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/register/register.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Email already in use error prompt</note>
+      </trans-unit>
+      <trans-unit id="ae92a2710e48dedd3d5155af362947e728d73789" datatype="html">
+        <source> User Management </source>
+        <target state="final"> Benutzerverwaltung </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/admin.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">User management tab heading</note>
+        <note priority="1" from="meaning">Admin panel</note>
+      </trans-unit>
+      <trans-unit id="7537cc92c63c7440f71c78faa7ec8aa948454452" datatype="html">
+        <source> Statistics </source>
+        <target state="final"> Statistiken </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/admin.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Statistics tab heading</note>
+        <note priority="1" from="meaning">Admin panel</note>
+      </trans-unit>
+      <trans-unit id="dd62e8b518eb15e0862a4262a6b9f37a5242e18c" datatype="html">
+        <source>Verification may only be done via email-link</source>
+        <target state="final">Verifizierung ist nur via Email-Link möglich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteDirective" datatype="html">
+        <source> Delete </source>
+        <target state="final"> Löschen </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="daa52b3eb35d393bd15ae121c96b502ef4011163" datatype="html">
+        <source> Delete </source>
+        <target state="final"> Löschen </target>
+        <note priority="1" from="description">Caption of button to delete user account</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ec7e80656c9cb35883190f773d2f8b65675797e7" datatype="html">
+        <source>Cannot delete system-accounts</source>
+        <target state="final">System-accounts koennen nicht gelöscht werden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Prompting that system accounts cannot be deleted</note>
+        <note priority="1" from="meaning">tooltop</note>
+      </trans-unit>
+      <trans-unit id="0a904ed3005710beb3130222ab5783a8f2863339" datatype="html">
+        <source>Really delete user?</source>
+        <target state="final">Benutzer wirklich löschen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Prompt asking if user (email given) should really be deleted</note>
+      </trans-unit>
+      <trans-unit id="f82005226520d32abd68d8739ee9807e7ffce1d0" datatype="html">
+        <source>User was deleted</source>
+        <target state="final">Benutzer wurde gelöscht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Selected user was successfully deleted</note>
+        <note priority="1" from="meaning">Feedback prompt</note>
+      </trans-unit>
+      <trans-unit id="d62cc037fa3643a49a559225754ef2850e6238e9" datatype="html">
+        <source>User (1) had role (2) assigned</source>
+        <target state="final">Benutzer (1) hat die Rolle (2) zugewiesen bekommen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Feedback of toggling on role for user</note>
+      </trans-unit>
+      <trans-unit id="9bb342082d3db5e270bd9297f9478b986578c662" datatype="html">
+        <source>User (1) had role (2) revoked</source>
+        <target state="final">Von Benutzer (1) wurde die Rolle (2) entfernt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Feedback of toggling off role for user</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

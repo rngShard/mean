@@ -15,13 +15,12 @@ import { CatchErrorInterceptor } from './interceptors/http-error.interceptor';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { MatDialogRef } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,19 +30,16 @@ import { MatDialogRef } from '@angular/material/dialog';
     SharedModule,
     AuthModule,
     AdminModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthHeaderInterceptor,
-    multi: true,
+    multi: true
   }, {
     provide: HTTP_INTERCEPTORS,
     useClass: CatchErrorInterceptor,
-    multi: true,
-  // }, { // this would allow MatDialogRef-Components to be displayed as normal non-dialog ones as well ...
-  //   provide: MatDialogRef,
-  //   useValue: {}
+    multi: true
   }],
   entryComponents: [],
   bootstrap: [AppComponent]
