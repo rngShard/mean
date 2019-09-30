@@ -16,7 +16,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "extract-i18n:en-de": "ng xi18n --output-path locale && xliffmerge --profile src/xliffmerge.json en de"
+    "extract-i18n": "ng xi18n --output-path locale && xliffmerge --profile src/xliffmerge.json en de"
   },
   "private": true,
   "dependencies": {

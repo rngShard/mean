@@ -13,8 +13,9 @@
       </a>
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngIf="user && user.isAdmin" [routerLink]="['/admin']" i18n="Admin page header|Menu entry that navigates to the Admin page"> Administration </button>
-        <button mat-menu-item (click)="logout()" i18n="@@logoutDirective"> Logout </button>
+        <button mat-menu-item (click)="logout(logoutMsg.msg)" i18n="@@logoutDirective"> Logout </button>
       </mat-menu>
     </div>
   </mat-toolbar>
 </header>
+<app-snackbar-message #logoutMsg msg="Logging out" i18n-msg="log-out message"></app-snackbar-message>

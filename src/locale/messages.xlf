@@ -65,6 +65,14 @@
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5968ef84e7c2774c73d630956f94e77dddb74714" datatype="html">
+        <source>Logging out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">log-out message</note>
+      </trans-unit>
       <trans-unit id="4044d0421d2e9478dc1ebcf7a0d3fb8801823dd6" datatype="html">
         <source> Register </source>
         <context-group purpose="location">

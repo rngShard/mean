@@ -24,6 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTooltipModule } from '@angular/material';
 
+import { SnackbarMessageComponent } from './snackbar-message.component';
+
 const modules = [
   CommonModule,
   MatToolbarModule,
@@ -51,8 +53,13 @@ const modules = [
 ];
 
 @NgModule({
+  declarations: [
+    SnackbarMessageComponent
+  ],
   imports: [...modules],
-  exports: [...modules],
-  declarations: []
+  exports: [
+    ...modules,
+    SnackbarMessageComponent
+  ]
 })
 export class SharedModule {}
