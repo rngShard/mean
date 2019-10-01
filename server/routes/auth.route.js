@@ -46,8 +46,9 @@ async function register(req, res, next) {
   });
 }
 
-async function verify(req, res, next) {
-  // TODO
+async function verify(req, res) {
+  let assignRes = await userCtrl.assignRole(req.body, 'verified');
+  res.json(assignRes);
 }
 
 function login(req, res) {

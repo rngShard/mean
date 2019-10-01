@@ -47,8 +47,9 @@ export class AuthService {
   verify(id: string) {
     return Observable.create(observer => {
       const lang = this.getLanguage();
+      const _id = id;
       this.http.post('/api/auth/verify', {
-        id
+        _id
       }).subscribe((data: any) => {
         observer.next(data);
         observer.complete();

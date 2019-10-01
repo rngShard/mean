@@ -16,8 +16,9 @@ export class VerifyComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('verifying: ', this.id);
-    // TODO: authservice
+    this._authService.verify(this.id).subscribe(() => {
+      this.verificationResult = true;
+    }, err => console.log(err));
   }
 
   getId(): string { // retrieves id from path
