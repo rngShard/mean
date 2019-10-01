@@ -1,0 +1,19 @@
+mat-grid-tile.heading-tile {
+  background-color:lightgrey;
+
+  h3, p {
+    margin: 0 1.5em;
+  }
+}
+
+mat-grid-tile.info-tile {
+  background-color:silver;
+  
+  div {
+    padding: 1em;
+  }
+}
+
+mat-grid-tile.main-content {
+  background-color: lightblue;
+}

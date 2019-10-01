@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, observable } from 'rxjs';
 
 import { TokenStorage } from './token.storage';
-import { TooltipComponent } from '@angular/material/tooltip';
 
 @Injectable()
 export class AuthService {
@@ -23,14 +22,15 @@ export class AuthService {
           this.token.saveToken(data.token);
           observer.complete();
       }, error => {
-        observer.error();
+        observer.error(error);
       })
     });
   }
 
   register(username : string, email : string, password : string, repeatPassword : string) : Observable <any> {
     return Observable.create(observer => {
-      this.http.post('/api/auth/register', {
+      const lang = this.getLanguage();
+      this.http.post(`/api/auth/register/${lang}`, {
         username,
         email,
         password,
@@ -41,6 +41,19 @@ export class AuthService {
         this.token.saveToken(data.token);
         observer.complete();
       }, error => observer.error(error));
+    });
+  }
+
+  verify(id: string) {
+    return Observable.create(observer => {
+      const lang = this.getLanguage();
+      const _id = id;
+      this.http.post('/api/auth/verify', {
+        _id
+      }).subscribe((data: any) => {
+        observer.next(data);
+        observer.complete();
+      }, err => observer.error(err));
     });
   }
 
@@ -75,5 +88,11 @@ export class AuthService {
     this.token.signOut();
     this.setUser(null);
     delete (<any>window).user;
+  }
+
+  getLanguage(): string {
+    let path = window.location.pathname;  // e.g. '/en/'
+    let lang = path.substring(1, 3);  // e.g. 'en'
+    return lang;
   }
 }

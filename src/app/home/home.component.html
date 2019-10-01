@@ -1,3 +1,39 @@
-<p>
-  here comes your (Home) content
-</p>
+<mat-grid-list cols="4" rowHeight="10em">
+  <mat-grid-tile class="heading-tile" colspan="3" rowspan="1">
+    <h3 i18n="Home heading greeting"> Welcome to the MEAN Boilerplate Application! </h3>
+    <p i18n="Home application description">
+      This boilerplate application demonstrates the use of the MEAN-Stack (MongoDB, Express, Angular & Node) to develop and deploy full-stack Javascript applications. 
+    </p>
+  </mat-grid-tile>
+  <mat-grid-tile class="info-tile" colspan="1" rowspan="1">
+    <div>
+      <u i18n="Contact listing heading"> Contact: </u>
+      <ul>
+        <li> <a href="https://github.com/rngShard"> Github </a> </li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="info-tile" colspan="1" rowspan="1">
+    <div>
+      <i i18n> This application supports the following languages: </i>
+      <ul>
+        <li> <a href="/en" i18n> English (en) </a> </li>
+        <li> <a href="/de" i18n> German (de) </a> </li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="main-content" colspan="3" rowspan="3">
+    <p i18n="Placeholder for home content like e.g. news"> Put e.g. news or so here </p>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- 
+<div class="home-content">
+  <p>
+    This application is available in the following languages:
+  </p>
+  <ul>
+    <li> English (en) </li>
+    <li> German (de) </li>
+  </ul>
+</div> -->
