@@ -24,7 +24,8 @@ export class AppComponent implements OnInit {
     private domSanitizer: DomSanitizer,
     private matIconRegistry: MatIconRegistry
   ) {
-    this.registerSvgIcons()
+    this.registerSvgIcons();
+    this.user = null;
   }
 
   public ngOnInit() {

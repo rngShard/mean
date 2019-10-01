@@ -1,6 +1,7 @@
 <header>
   <mat-toolbar color="primary">
     <a [routerLink]="['/']" class="logo"></a>
+    <button *ngIf="user && user.isVerified" mat-raised-button color="primary"> Verified Area </button>
     <span class="example-spacer"></span>
     <a class="links side" *ngIf="!user" (click)="openLoginDialog()" i18n="@@loginDirective"> Login </a>
     <div>
