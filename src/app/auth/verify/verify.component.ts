@@ -21,8 +21,8 @@ export class VerifyComponent implements OnInit {
   }
 
   getId(): string { // retrieves id from path
-    const path = window.location.pathname;
-    const pathArgs = path.split('/'); // '', [lang], 'auth', 'verify', [id]
-    return pathArgs[4];
+    const searchParams = window.location.search;
+    const id = searchParams.substring(1).split('=')[1];
+    return id;
   }
 }

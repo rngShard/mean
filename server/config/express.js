@@ -28,7 +28,7 @@ const langs = ['en', 'de'];
 for (let lang of langs) {
   const app_lang = express();
   app_lang.use(express.static(path.join(__dirname, distDir, lang)));
-  app_lang.get('/', (req, res) => {
+  app_lang.get(/^((?!(api)).)*/, (req, res) => {
     res.sendFile(path.join(__dirname, distDir, lang + '/index.html'));
   });
   app.use('/' + lang, app_lang);

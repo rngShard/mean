@@ -29,7 +29,7 @@ async function register(req, res, next) {
   delete user.hashedPassword;
   req.user = user;
 
-  const registerLandingPage = `${config.hostname}:${config.port}/${req.params.lang}/auth/verify/${user._id}`;
+  const registerLandingPage = `${config.hostname}:${config.port}/${req.params.lang}/auth/verify?id=${user._id}`;
   const mailOptions = {
     from: config.mail.auth.user,
     to: user.email,

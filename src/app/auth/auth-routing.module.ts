@@ -19,8 +19,7 @@ const routes: Routes = [{
     component: RegisterComponent
   }, {
     path: 'verify',
-    component: VerifyComponent,
-    pathMatch: 'prefix' // also includes id to verify in link
+    component: VerifyComponent
   }]
 }];
 
