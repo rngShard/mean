@@ -5,14 +5,16 @@
       <tr>
         <td>
           <mat-form-field>
-            <input matInput i18n-placeholder="Login Form|Email placeholder" placeholder="Email" [(ngModel)]="email" name="email" required>
+            <input matInput i18n-placeholder="Login Form|Email placeholder" placeholder="Email" [(ngModel)]="email" name="email" required
+              (keyup.enter)="login(loginSuccess.msg, loginDenied.msg)">
           </mat-form-field>
         </td>
       </tr>
       <tr>
         <td>
           <mat-form-field>
-            <input matInput i18n-placeholder="Login Form|Password placeholder" placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+            <input matInput i18n-placeholder="Login Form|Password placeholder" placeholder="Password" [(ngModel)]="password" type="password" name="password" required
+              (keyup.enter)="login(loginSuccess.msg, loginDenied.msg)">
           </mat-form-field>
         </td>
       </tr>
