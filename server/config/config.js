@@ -8,6 +8,10 @@ const envVarsSchema = Joi.object({
   NODE_ENV: Joi.string()
     .allow(['development', 'production', 'test', 'provision'])
     .default('development'),
+  SERVER_PROTOCOL: Joi.string()
+    .default('http'),
+  SERVER_HOSTNAME: Joi.string()
+    .default('localhost'),
   SERVER_PORT: Joi.number()
     .default(4040),
   MONGOOSE_DEBUG: Joi.boolean()
@@ -43,6 +47,8 @@ if (error) {
 
 const config = {
   env: envVars.NODE_ENV,
+  protocol: envVars.SERVER_PROTOCOL,
+  hostname: envVars.SERVER_HOSTNAME,
   port: envVars.SERVER_PORT,
   mongooseDebug: envVars.MONGOOSE_DEBUG,
   jwtSecret: envVars.JWT_SECRET,
