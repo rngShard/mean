@@ -41,7 +41,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e9d505c7a7e2f347684a090a0dac40fd96970e2f" datatype="html">
@@ -75,19 +75,19 @@
       <trans-unit id="49bf093f2cdd19e42397ba4791a0f66d3f93221d" datatype="html">
         <source> Administration </source>
         <target state="final"> Administration </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
         <note priority="1" from="description">Menu entry that navigates to the Admin page</note>
         <note priority="1" from="meaning">Admin page header</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="logoutDirective" datatype="html">
         <source> Logout </source>
         <target state="final"> Logout </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5968ef84e7c2774c73d630956f94e77dddb74714" datatype="html">
@@ -96,8 +96,72 @@
         <note priority="1" from="description">log-out message</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="d55edce3078671f3d68fb92218b23e7cee389a4c" datatype="html">
+        <source> Welcome to the MEAN Boilerplate Application! </source>
+        <target state="final"> Welcome to the MEAN Boilerplate Application! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Home heading greeting</note>
+      </trans-unit>
+      <trans-unit id="29a53d642ed63f64feace3283b095b12264a3630" datatype="html">
+        <source>
+      This boilerplate application demonstrates the use of the MEAN-Stack (MongoDB, Express, Angular &amp; Node) to develop and deploy full-stack Javascript applications. 
+    </source>
+        <target state="final">
+      This boilerplate application demonstrates the use of the MEAN-Stack (MongoDB, Express, Angular &amp; Node) to develop and deploy full-stack Javascript applications. 
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Home application description</note>
+      </trans-unit>
+      <trans-unit id="711f5f2842796b9ca9e62c06a1011665da9f2a45" datatype="html">
+        <source> Contact: </source>
+        <target state="final"> Contact: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Contact listing heading</note>
+      </trans-unit>
+      <trans-unit id="fad61201510162fa78a8542f1fd240c0f96716c7" datatype="html">
+        <source> This application supports the following languages: </source>
+        <target state="final"> This application supports the following languages: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9b7be264bce9488066cce15d6217e3fa8c92184" datatype="html">
+        <source> English (en) </source>
+        <target state="final"> English (en) </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3bc74eb1a14c18d57333c60c19292d2ba0f5400d" datatype="html">
+        <source> German (de) </source>
+        <target state="final"> German (de) </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f89100935098e92521ddc11b746b3c97484c83e" datatype="html">
+        <source> Put e.g. news or so here </source>
+        <target state="final"> Put e.g. news or so here </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder for home content like e.g. news</note>
       </trans-unit>
       <trans-unit id="4044d0421d2e9478dc1ebcf7a0d3fb8801823dd6" datatype="html">
         <source> Register </source>

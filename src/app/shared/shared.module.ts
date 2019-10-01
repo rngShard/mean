@@ -22,7 +22,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
-import { MatTooltipModule } from '@angular/material';
+import { MatTooltipModule, MatGridListModule } from '@angular/material';
 
 import { SnackbarMessageComponent } from './snackbar-message.component';
 
@@ -49,7 +49,8 @@ const modules = [
   MatSelectModule,
   FlexLayoutModule,
   MatCheckboxModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatGridListModule
 ];
 
 @NgModule({
