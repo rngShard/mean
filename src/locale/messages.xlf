@@ -158,6 +158,36 @@
         </context-group>
         <note priority="1" from="description">Email already in use error prompt</note>
       </trans-unit>
+      <trans-unit id="81a4ae10f32ea4046945b6e3f78769a438e29879" datatype="html">
+        <source> Account verification </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/verify/verify.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Heading for verification card panel</note>
+      </trans-unit>
+      <trans-unit id="c74468bb4b566c31406854526687d62c35965b96" datatype="html">
+        <source>
+      Your verification was successful. Welcome !!
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/verify/verify.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Successful verification paragraph display</note>
+        <note priority="1" from="meaning">Verify feedback</note>
+      </trans-unit>
+      <trans-unit id="eac1be53ba13a28da40cc5e62cd53d2a0aa99d26" datatype="html">
+        <source>
+      Something went wrong with your account verification. Have you been directed here via Email?
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/verify/verify.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Failed verification paragraph display</note>
+        <note priority="1" from="meaning">Verify feedback</note>
+      </trans-unit>
       <trans-unit id="ae92a2710e48dedd3d5155af362947e728d73789" datatype="html">
         <source> User Management </source>
         <context-group purpose="location">
@@ -180,25 +210,25 @@
         <source>Verification may only be done via email-link</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="deleteDirective" datatype="html">
         <source> Delete </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="daa52b3eb35d393bd15ae121c96b502ef4011163" datatype="html">
         <source> Delete </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">25</context>
         </context-group>
         <note priority="1" from="description">Caption of button to delete user account</note>
       </trans-unit>
@@ -206,7 +236,7 @@
         <source>Cannot delete system-accounts</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <note priority="1" from="description">Prompting that system accounts cannot be deleted</note>
         <note priority="1" from="meaning">tooltop</note>
@@ -215,7 +245,7 @@
         <source>Really delete user?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <note priority="1" from="description">Prompt asking if user (email given) should really be deleted</note>
       </trans-unit>
@@ -223,7 +253,7 @@
         <source>User was deleted</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">35</context>
         </context-group>
         <note priority="1" from="description">Selected user was successfully deleted</note>
         <note priority="1" from="meaning">Feedback prompt</note>
@@ -232,7 +262,7 @@
         <source>User (1) had role (2) assigned</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">36</context>
         </context-group>
         <note priority="1" from="description">Feedback of toggling on role for user</note>
       </trans-unit>
@@ -240,7 +270,7 @@
         <source>User (1) had role (2) revoked</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/admin/userMgmt/user-mgmt.component.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">Feedback of toggling off role for user</note>
       </trans-unit>
