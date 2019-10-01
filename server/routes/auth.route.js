@@ -10,7 +10,7 @@ const strings = require('../config/strings');
 const router = express.Router();
 module.exports = router;
 
-router.post('/register', asyncHandler(register), login);
+router.post('/register/:lang', asyncHandler(register), login);
 router.post('/login', passport.authenticate('local', { session: false }), login);
 router.get('/me', passport.authenticate('jwt', { session: false }), login);
 
@@ -31,8 +31,8 @@ async function register(req, res, next) {
   var mailOptions = {
     from: config.mail.auth.user,
     to: user.email,
-    subject: strings.de.mail.registrationSubject,
-    html: strings.de.mail.registrationHtml
+    subject: strings[req.params.lang].mail.registrationSubject,
+    html: strings[req.params.lang].mail.registrationHtml
   };
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
