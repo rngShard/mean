@@ -11,7 +11,7 @@ const router = express.Router();
 module.exports = router;
 
 router.post('/register/:lang', asyncHandler(register), login);
-router.get('/:lang/verify/:id', asyncHandler(verify));
+router.post('/verify', asyncHandler(verify));
 router.post('/login', passport.authenticate('local', { session: false }), login);
 router.get('/me', passport.authenticate('jwt', { session: false }), login);
 
@@ -29,7 +29,7 @@ async function register(req, res, next) {
   delete user.hashedPassword;
   req.user = user;
 
-  const registerLandingPage = `${config.hostname}:${config.port}/${req.params.lang}/verify/${user._id}`;
+  const registerLandingPage = `${config.hostname}:${config.port}/${req.params.lang}/auth/verify/${user._id}`;
   const mailOptions = {
     from: config.mail.auth.user,
     to: user.email,

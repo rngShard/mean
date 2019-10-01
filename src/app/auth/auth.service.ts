@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, observable } from 'rxjs';
 
 import { TokenStorage } from './token.storage';
 
@@ -41,6 +41,18 @@ export class AuthService {
         this.token.saveToken(data.token);
         observer.complete();
       }, error => observer.error(error));
+    });
+  }
+
+  verify(id: string) {
+    return Observable.create(observer => {
+      const lang = this.getLanguage();
+      this.http.post('/api/auth/verify', {
+        id
+      }).subscribe((data: any) => {
+        observer.next(data);
+        observer.complete();
+      }, err => observer.error(err));
     });
   }
 

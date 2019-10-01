@@ -1,0 +1,13 @@
+<mat-card class="verify-card">
+  <mat-card-header>
+    <mat-card-title i18n="Heading for verification card panel"> Account verification </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <i *ngIf="verificationResult" i18n="Verify feedback|Successful verification paragraph display">
+      Your verification was successful. Welcome !!
+    </i>
+    <i *ngIf="!(verificationResult)" i18n="Verify feedback|Failed verification paragraph display">
+      Something went wrong with your account verification. Have you been directed here via Email?
+    </i>
+  </mat-card-content>
+</mat-card>
