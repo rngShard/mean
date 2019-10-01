@@ -29,7 +29,10 @@ const envVarsSchema = Joi.object({
   SYS_ACC_TEST_EMAIL: Joi.string().email()
     .default('test@system.com'),
   SYS_ACC_TEST_PW: Joi.string()
-    .description('Password for system test account')
+    .description('Password for system test account'),
+  MAIL_SERVICE: Joi.string(),
+  MAIL_AUTH_USER: Joi.string().email(),
+  MAIL_AUTH_PASS: Joi.string()
 }).unknown()
   .required();
 
@@ -58,8 +61,14 @@ const config = {
     email: envVars.SYS_ACC_TEST_EMAIL,
     password: envVars.SYS_ACC_TEST_PW,
     repeatPassword: envVars.SYS_ACC_TEST_PW
+  },
+  mail: {
+    service: envVars.MAIL_SERVICE,
+    auth: {
+      user: envVars.MAIL_AUTH_USER,
+      pass: envVars.MAIL_AUTH_PASS
+    }
   }
-
 };
 
 module.exports = config;

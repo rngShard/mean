@@ -23,7 +23,7 @@ export class AuthService {
           this.token.saveToken(data.token);
           observer.complete();
       }, error => {
-        observer.error();
+        observer.error(error);
       })
     });
   }
