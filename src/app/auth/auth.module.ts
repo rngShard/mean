@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthService } from './auth.service';
 import { TokenStorage } from './token.storage';
 import { AuthRoutingModule } from './auth-routing.module';
+import { VerifyComponent } from './verify/verify.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AuthRoutingModule } from './auth-routing.module';
   ],
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    VerifyComponent
   ],
   providers: [
     AuthService,

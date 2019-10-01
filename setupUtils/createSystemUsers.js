@@ -31,6 +31,7 @@ console.log('>> Adding ', config.sysAccTest);
 userCtrl.insert(config.sysAccTest).then(doc => {
   console.log('-> Insertion result: ', doc);
   userCtrl.assignRole(doc._id, 'system').then(doc => console.log(`-> Adding role "system" to test: `, doc));
+  userCtrl.assignRole(doc._id, 'verified').then(doc => console.log(`-> Adding role "admin" to admin: `, doc));
 }, (rejection) => {
   console.error('!!! Error on insertion:\n', rejection);
 });
