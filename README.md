@@ -37,8 +37,9 @@ git clone https://github.com/rngShard/mean.git
 cd mean
 npm install
 cp .env.example .env  # then adjust config params
-node setupUtils/createSystemUsers.js  # to create initial System-User accounts (admin & test)
+node setupUtils/createSystemUsers.js  # to create initial System-User accounts
 ```
+Initial system accounts have login credentials of admin@system.com & test@system.com with passwords as specified in the _.env_-file. 
 For development, continue with
 ```bash
 npm start
@@ -50,6 +51,7 @@ npm run-script deploy
 
 ### Deployment
 For linux-based systems, [PM2](http://pm2.keymetrics.io/) can be nciely used to deploy & monitor node applications as services.
+For Windows-Server, one may consider [NSSM](https://nssm.cc/) to deploy the Node-Executable linked to `server/index.js`.
 
 
 ## Credits 
